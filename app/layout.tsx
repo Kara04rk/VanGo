@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
+import ClientOnly from "./components/ClientOnly";
+import Model from "./components/Models/Model";
 
 const font = Exo_2({ subsets: ["latin"] });
 
@@ -20,7 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar />
+        <ClientOnly>
+        <Model/>
+          <Navbar />
+          
+          </ClientOnly>
+        
         {children}
         
         </body>
