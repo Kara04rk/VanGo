@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
-import Model from "./components/Models/Model";
+import Modal from "./components/Models/Modal";
 
 const font = Exo_2({ subsets: ["latin"] });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-        <Model/>
+        <Modal title="Hello" isOpen/>
           <Navbar />
           
           </ClientOnly>
